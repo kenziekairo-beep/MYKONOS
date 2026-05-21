@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mykonos Official Mega Store</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600;700;800&display=swap');
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        /* Soft premium gradients for bottles based on vibe */
+        .grad-baby-love { background: linear-gradient(135deg, #ffdeeb 0%, #ffd1e3 100%); }
+        .grad-blossom { background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%); }
+        .grad-california { background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%); }
+        .grad-california-blue { background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); }
+        .grad-california-sig { background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); }
+        .grad-ivory { background: linear-gradient(135deg, #eef2f3 0%, #8e9eab 100%); }
+        .grad-verve { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+        .grad-jynx { background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); }
+        .grad-sansa { background: linear-gradient(135deg, #f9d423 0%, #ff4e50 100%); }
+        .grad-cristaux { background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%); }
+        .grad-zora { background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); }
+        .grad-moroccan { background: linear-gradient(135deg, #ffd194 0%, #70e1f5 100%); }
+        .grad-enchanted { background: linear-gradient(135deg, #a8ff78 0%, #78ffd6 100%); }
+        .grad-senja { background: linear-gradient(135deg, #2c3e50 0%, #fd746c 100%); }
+        .grad-eclipse { background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%); }
+        .grad-adelina { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); }
+        .grad-stilettos { background: linear-gradient(135deg, #96deda 0%, #50c9c3 100%); }
+        .grad-satin-blanc { background: linear-gradient(135deg, #fdfbf7 0%, #eef1f6 100%); }
+        .grad-pink-beach { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%); }
+        .grad-aphrodite { background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%); }
+        .grad-dark-secret { background: linear-gradient(135deg, #141e30 0%, #243b55 100%); }
+        .grad-down-to-earth { background: linear-gradient(135deg, #91eae4 0%, #86a8e7 50%, #7f7fd5 100%); }
+        .grad-bonfire-vanilla { background: linear-gradient(135deg, #f857a6 0%, #ff5858 100%); }
+        .grad-caramel { background: linear-gradient(135deg, #ffc09f 0%, #dee2d6 100%); }
+        .grad-berry { background: linear-gradient(135deg, #ff9966 0%, #ff5e62 100%); }
+        .grad-vanilla-clouds { background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%); }
+        .grad-matcha { background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%); }
+        .grad-cherry { background: linear-gradient(135deg, #f857a6 0%, #ff5858 100%); }
+        .grad-coconut { background: linear-gradient(135deg, #eef2f3 0%, #8e9eab 100%); }
+        .grad-chai { background: linear-gradient(135deg, #ffd194 0%, #70e1f5 100%); }
+        .grad-luminos { background: linear-gradient(135deg, #fffbd5 0%, #b20a2c 100%); }
+        .grad-cafe { background: linear-gradient(135deg, #3a2512 0%, #a27b5c 100%); }
+        .grad-milk { background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%); }
+        .grad-xoxo { background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); }
+        .grad-monaco { background: linear-gradient(135deg, #c31432 0%, #240b36 100%); }
+        .grad-on-the-rocks { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); }
+        .grad-slow-living { background: linear-gradient(135deg, #96e6a1 0%, #d4fc79 100%); }
+        .grad-utopia { background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%); }
+        .grad-penthouse { background: linear-gradient(135deg, #ffe259 0%, #ffa751 100%); }
+        .grad-sorrento { background: linear-gradient(135deg, #70e1f5 0%, #ffd194 100%); }
+        .grad-reflection { background: linear-gradient(135deg, #3a7bd5 0%, #3a6073 100%); }
+        .grad-inception { background: linear-gradient(135deg, #0052d4 0%, #4364f7 50%, #6fb1fc 100%); }
+        .grad-royal { background: linear-gradient(135deg, #800080 0%, #ffc0cb 100%); }
+        .grad-pistachio { background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen pb-12">
+
+    <!-- Header / Navigasi -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="bg-rose-600 text-white p-2.5 rounded-xl">
+                    <i data-lucide="droplet" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold tracking-tight bg-gradient-to-r from-rose-700 to-rose-500 bg-clip-text text-transparent">Mykonos Official</h1>
+                    <p class="text-xs text-slate-400">Mega Instant Store</p>
+                </div>
+            </div>
+            <div class="hidden sm:flex items-center gap-4">
+                <span class="inline-flex items-center gap-1.5 text-xs font-semibold bg-rose-50 text-rose-700 px-3 py-1 rounded-full">
+                    <span class="w-1.5 h-1.5 bg-rose-500 rounded-full animate-ping"></span>
+                    Pengiriman Cepat & Ambil Sendiri
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Hero & Pencarian -->
+    <section class="max-w-6xl mx-auto px-4 mt-6">
+        <div class="relative bg-gradient-to-r from-rose-950 via-slate-900 to-slate-900 text-white rounded-3xl p-6 md:p-10 overflow-hidden shadow-xl mb-8">
+            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#f43f5e_1px,transparent_1px)] [background-size:16px_16px]"></div>
+            <div class="relative z-10 max-w-2xl">
+                <span class="text-xs font-semibold tracking-wider text-rose-400 uppercase bg-rose-400/10 px-3 py-1 rounded-full">Katalog Lengkap Mykonos Original</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold mt-3 tracking-tight">Temukan Aroma Mykonos Impianmu</h2>
+                <p class="text-slate-300 mt-2 text-sm leading-relaxed">Tersedia pilihan ukuran 50ml dan 100ml. Cukup pilih metode diantar langsung ke rumah Anda atau ambil sendiri secara instan di gerai **Watsons** atau **Beauty Hall** pilihan Anda!</p>
+                
+                <!-- Search Bar Dinamis -->
+                <div class="mt-6 relative max-w-lg">
+                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                        <i data-lucide="search" class="text-slate-400 w-5 h-5"></i>
+                    </div>
+                    <input type="text" id="search-input" oninput="handleSearch()" placeholder="Ketik nama varian (misal: Matcha, Caramel, California, Zora...)" class="w-full pl-11 pr-4 py-3.5 bg-white text-slate-950 placeholder-slate-400 rounded-2xl shadow-lg border-none focus:ring-2 focus:ring-rose-500 focus:outline-none text-sm font-medium transition">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-4">
+        <!-- Section Header -->
+        <div class="flex justify-between items-center mb-6">
+            <h3 class="text-lg font-extrabold text-slate-800 flex items-center gap-2">
+                <i data-lucide="sparkles" class="text-rose-500 w-5 h-5"></i>
+                Daftar Varian Mykonos (<span id="product-count" class="text-rose-600">0</span>)
+            </h3>
+        </div>
+        
+        <!-- Hasil pencarian kosong -->
+        <div id="no-products" class="hidden text-center py-20 bg-white rounded-3xl border border-slate-100 shadow-sm">
+            <div class="w-16 h-16 bg-slate-100 text-slate-400 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                🔎
+            </div>
+            <h4 class="text-lg font-bold text-slate-800">Aroma Tidak Ditemukan</h4>
+            <p class="text-slate-500 text-sm mt-1">Silakan coba kata kunci varian Mykonos lainnya.</p>
+        </div>
+
+        <!-- Product Grid -->
+        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Di-render oleh Javascript -->
+        </div>
+    </main>
+
+    <!-- MODAL TRANSAKSI (BELI SEKARANG) -->
+    <div id="modal-checkout" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-white rounded-3xl w-full max-w-lg overflow-hidden shadow-2xl transform scale-95 transition-all duration-300" id="checkout-card">
+            
+            <!-- Modal Header -->
+            <div class="p-6 border-b border-slate-100 flex justify-between items-center bg-slate-50">
+                <div>
+                    <h3 class="text-lg font-bold text-slate-900">Beli Sekarang</h3>
+                    <p class="text-xs text-slate-500">Lengkapi data ukuran, pengiriman, dan pembayaran</p>
+                </div>
+                <button onclick="closeCheckoutModal()" class="text-slate-400 hover:text-slate-600 p-1.5 rounded-full hover:bg-slate-200 transition">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="p-6 space-y-5 max-h-[65vh] overflow-y-auto">
+                <!-- Info Ringkas Produk -->
+                <div class="flex items-center gap-4 bg-rose-50/50 border border-rose-100/50 p-4 rounded-2xl">
+                    <div id="modal-product-img" class="w-20 h-20 rounded-xl flex items-center justify-center text-3xl shadow-md relative overflow-hidden text-white font-black">
+                        <!-- Card representation -->
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-bold text-rose-700 bg-rose-100 px-2.5 py-0.5 rounded-full tracking-wider uppercase">Mykonos Original</span>
+                        <h4 id="modal-product-name" class="font-extrabold text-slate-800 text-base mt-1"></h4>
+                        <p id="modal-product-price" class="text-rose-600 font-extrabold text-lg mt-0.5"></p>
+                    </div>
+                </div>
+
+                <!-- PILIHAN UKURAN (50ml & 100ml) -->
+                <div class="space-y-2">
+                    <label class="block text-sm font-bold text-slate-700">Pilih Ukuran Parfum</label>
+                    <div class="grid grid-cols-2 gap-3">
+                        <label class="border-2 border-rose-600 bg-white rounded-xl p-3 flex items-center justify-between cursor-pointer" id="label-size-50">
+                            <div class="flex items-center gap-2">
+                                <input type="radio" name="perfume_size" value="50ml" checked onchange="updateSizeSelection('50ml')" class="w-4 h-4 text-rose-600 focus:ring-rose-500">
+                                <span class="text-sm font-bold text-slate-800">50 ml</span>
+                            </div>
+                            <span class="text-xs text-slate-400">Harga Standar</span>
+                        </label>
+                        <label class="border border-slate-200 bg-white rounded-xl p-3 flex items-center justify-between cursor-pointer" id="label-size-100">
+                            <div class="flex items-center gap-2">
+                                <input type="radio" name="perfume_size" value="100ml" onchange="updateSizeSelection('100ml')" class="w-4 h-4 text-rose-600 focus:ring-rose-500">
+                                <span class="text-sm font-bold text-slate-800">100 ml</span>
+                            </div>
+                            <span class="text-xs text-emerald-600 font-bold">+ Rp120.000</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- OPSI PENYERAHAN BARANG (DIKIRIM / AMBIL SENDIRI) -->
+                <div class="space-y-2">
+                    <label class="block text-sm font-bold text-slate-700">Metode Penyerahan Barang</label>
+                    <div class="grid grid-cols-2 gap-3">
+                        <button type="button" onclick="selectDeliveryType('antar')" id="btn-delivery-antar" class="border-2 border-rose-600 bg-rose-50/50 p-3 rounded-2xl flex items-center justify-center gap-2 transition font-bold text-sm text-slate-800">
+                            <i data-lucide="truck" class="w-4 h-4 text-rose-600"></i>
+                            Diantar Alamat
+                        </button>
+                        <button type="button" onclick="selectDeliveryType('ambil')" id="btn-delivery-ambil" class="border border-slate-200 p-3 rounded-2xl flex items-center justify-center gap-2 transition font-bold text-sm text-slate-600 hover:border-rose-600">
+                            <i data-lucide="store" class="w-4 h-4 text-slate-400" id="icon-delivery-ambil"></i>
+                            Ambil Sendiri
+                        </button>
+                    </div>
+                </div>
+
+                <!-- SEKTOR DETAIL PENGIRIMAN ALAMAT (DITAMPILKAN JIKA PILIH DIANTAR) -->
+                <div id="section-delivery-fields" class="space-y-3 bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                    <h4 class="text-sm font-bold text-slate-800 flex items-center gap-2">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-rose-500"></i>
+                        Alamat Pengiriman Paket
+                    </h4>
+                    
+                    <div class="space-y-2.5">
+                        <input type="text" id="cust-name" placeholder="Nama Lengkap Penerima" class="w-full px-4 py-2.5 bg-white border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-rose-500">
+                        <input type="tel" id="cust-phone" placeholder="Nomor Handphone (WhatsApp)" class="w-full px-4 py-2.5 bg-white border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-rose-500">
+                        <textarea id="cust-address" placeholder="Tuliskan Alamat Lengkap Pengiriman (Nama Jalan, No Rumah, RT/RW, Kelurahan, Kecamatan, Kota, Kode Pos)" rows="3" class="w-full px-4 py-2.5 bg-white border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-rose-500 resize-none"></textarea>
+                    </div>
+                    <p id="address-error-msg" class="text-xs text-red-600 hidden flex items-center gap-1">
+                        <i data-lucide="alert-circle" class="w-3.5 h-3.5"></i> Mohon lengkapi semua data alamat pengiriman.
+                    </p>
+                </div>
+
+                <!-- SEKTOR DETAIL PENGAMBILAN SENDIRI (DITAMPILKAN JIKA PILIH AMBIL SENDIRI) -->
+                <div id="section-pickup-fields" class="hidden space-y-3 bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                    <h4 class="text-sm font-bold text-slate-800 flex items-center gap-2">
+                        <i data-lucide="map-pins" class="w-4 h-4 text-rose-500"></i>
+                        Pilih Lokasi Toko Pengambilan
+                    </h4>
+                    <div class="space-y-2.5">
+                        <input type="text" id="pickup-cust-name" placeholder="Nama Lengkap Pengambil" class="w-full px-4 py-2.5 bg-white border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-rose-500">
+                        <input type="tel" id="pickup-cust-phone" placeholder="Nomor Handphone (WhatsApp)" class="w-full px-4 py-2.5 bg-white border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-rose-500">
+                        
+                        <div class="space-y-2 pt-1">
+                            <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider">Lokasi Outlet Resmi</label>
+                            <div class="grid grid-cols-1 gap-2">
+                                <label class="border-2 border-rose-600 bg-white rounded-xl p-3 flex items-center gap-3 cursor-pointer" id="label-loc-watsons">
+                                    <input type="radio" name="pickup_outlet" value="Watsons Store Terdekat" checked onchange="toggleOutletStyle('watsons')" class="w-4 h-4 text-rose-600 focus:ring-rose-500">
+                                    <div class="text-left">
+                                        <p class="text-xs font-bold text-slate-800">Watsons Store</p>
+                                        <p class="text-[10px] text-slate-500">Ambil langsung di gerai Watsons Mall terdekat</p>
+                                    </div>
+                                </label>
+                                <label class="border border-slate-200 bg-white rounded-xl p-3 flex items-center gap-3 cursor-pointer" id="label-loc-beauty">
+                                    <input type="radio" name="pickup_outlet" value="Beauty Hall Boutique" onchange="toggleOutletStyle('beauty')" class="w-4 h-4 text-rose-600 focus:ring-rose-500">
+                                    <div class="text-left">
+                                        <p class="text-xs font-bold text-slate-800">Beauty Hall Boutique</p>
+                                        <p class="text-[10px] text-slate-500">Ambil di konter kecantikan Beauty Hall pusat</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <p id="pickup-error-msg" class="text-xs text-red-600 hidden flex items-center gap-1">
+                        <i data-lucide="alert-circle" class="w-3.5 h-3.5"></i> Mohon lengkapi Nama dan No HP Pengambil.
+                    </p>
+                </div>
+
+                <!-- Pilih Metode Pembayaran -->
+                <div class="space-y-2">
+                    <label class="block text-sm font-semibold text-slate-700">Metode Pembayaran</label>
+                    <div class="grid grid-cols-2 gap-3">
+                        <button type="button" onclick="selectPaymentMethod('wallet')" id="btn-pay-wallet" class="border-2 border-rose-600 bg-rose-50/50 p-4 rounded-2xl flex flex-col items-center justify-center gap-2 transition hover:border-rose-600">
+                            <i data-lucide="qr-code" class="w-6 h-6 text-rose-600"></i>
+                            <span class="text-sm font-bold text-slate-800">GoPay / E-Wallet</span>
+                            <span class="text-[10px] text-slate-500">Konfirmasi Manual</span>
+                        </button>
+                        <button type="button" onclick="selectPaymentMethod('admin')" id="btn-pay-admin" class="border border-slate-200 p-4 rounded-2xl flex flex-col items-center justify-center gap-2 transition hover:border-rose-600">
+                            <i data-lucide="shield-check" class="w-6 h-6 text-slate-400" id="icon-admin"></i>
+                            <span class="text-sm font-bold text-slate-800">Metode Admin</span>
+                            <span class="text-[10px] text-emerald-600 font-semibold bg-emerald-50 px-1.5 py-0.5 rounded">Otorisasi PIN</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- INSTRUKSI PEMBAYARAN GOPAY (Aktif jika metode Wallet dipilih) -->
+                <div id="wallet-payment-instructions" class="bg-amber-50 border border-amber-200 p-4 rounded-2xl space-y-3">
+                    <div class="flex items-center gap-2 text-amber-800">
+                        <i data-lucide="info" class="w-4.5 h-4.5 text-amber-600"></i>
+                        <h4 class="text-sm font-bold">Langkah Transfer Manual GoPay</h4>
+                    </div>
+                    <div class="text-xs text-slate-700 space-y-2 leading-relaxed">
+                        <p>Silakan lakukan transfer sesuai nilai total tagihan Anda ke akun GoPay resmi kami di bawah ini:</p>
+                        <div class="bg-white border border-amber-200 rounded-xl p-3 flex justify-between items-center">
+                            <div>
+                                <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Nomor GoPay Admin</p>
+                                <p class="text-base font-black text-rose-700 font-mono tracking-wide">+62-851-8516-0051</p>
+                            </div>
+                            <span class="text-[10px] bg-rose-50 text-rose-600 px-2 py-1 rounded-md font-bold">GoPay Aktif</span>
+                        </div>
+                        <p class="text-amber-900 font-medium">⚠️ Setelah melakukan transfer, simpan struk transfer Anda. Klik tombol konfirmasi di bawah untuk menerbitkan kode resi pengiriman.</p>
+                    </div>
+                </div>
+
+                <!-- Input PIN Admin (Benar-benar disembunyikan tanpa bocoran teks password) -->
+                <div id="admin-pin-section" class="hidden bg-slate-900 text-white p-4 rounded-2xl space-y-2.5 animate-fadeIn">
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="lock" class="w-4 h-4 text-rose-400"></i>
+                        <label class="block text-sm font-bold">Otorisasi PIN Keamanan Admin</label>
+                    </div>
+                    <div class="relative">
+                        <input type="password" id="admin-pin-input" placeholder="Masukkan 6 Digit PIN Admin" class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-xl text-center font-mono text-xl tracking-widest text-white focus:outline-none focus:ring-2 focus:ring-rose-500" maxlength="6">
+                    </div>
+                    <p id="pin-error-msg" class="text-xs text-rose-400 hidden flex items-center gap-1">
+                        <i data-lucide="alert-circle" class="w-3.5 h-3.5"></i> PIN Admin tidak valid / tidak cocok!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="p-6 border-t border-slate-100 bg-slate-50 flex flex-col gap-3">
+                <button onclick="processCheckout()" class="w-full bg-rose-600 hover:bg-rose-700 text-white font-bold py-3.5 px-6 rounded-2xl transition flex items-center justify-center gap-2 shadow-lg shadow-rose-600/15">
+                    <span id="submit-btn-text">Konfirmasi & Kirim Paket</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL SUKSES (TAMPILAN PESANAN DIKIRIM / KODE AMBIL) -->
+    <div id="modal-success" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-md hidden items-center justify-center p-4">
+        <div class="bg-white rounded-3xl w-full max-w-md overflow-hidden shadow-2xl p-6 text-center space-y-6">
+            <div id="success-icon" class="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-4xl shadow-inner animate-pulse">
+                📦
+            </div>
+            
+            <div class="space-y-2">
+                <h3 class="text-2xl font-extrabold text-slate-900" id="success-title">Pesanan Berhasil!</h3>
+                <p class="text-sm text-slate-500" id="success-desc">Pembayaran terkonfirmasi. Kurir kami sedang menyiapkan kiriman paket Anda.</p>
+            </div>
+
+            <!-- Card Informasi Resi & Pengiriman -->
+            <div class="bg-gradient-to-br from-rose-50 to-orange-50 border-2 border-dashed border-rose-200 p-5 rounded-2xl relative overflow-hidden text-left">
+                <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider block mb-2" id="ticket-label-type">Resi Pengiriman Anda (Otomatis)</span>
+                <span id="ticket-code" class="text-2xl font-black text-rose-700 tracking-wider font-mono block mb-4">MYKNS-XXXXXX</span>
+                
+                <div class="space-y-2 pt-3 border-t border-rose-100/70 text-xs">
+                    <div>
+                        <p class="text-slate-400" id="success-cust-label">Penerima:</p>
+                        <p id="ticket-recipient" class="font-bold text-slate-800">-</p>
+                    </div>
+                    <div>
+                        <p class="text-slate-400" id="success-address-label">Alamat Kirim:</p>
+                        <p id="ticket-address" class="font-bold text-slate-800 leading-relaxed">-</p>
+                    </div>
+                    <div class="flex justify-between items-center pt-2">
+                        <div>
+                            <p class="text-slate-400">Metode:</p>
+                            <p id="ticket-method" class="font-bold text-slate-800">-</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-slate-400" id="success-est-label">Estimasi Pengantaran:</p>
+                            <p class="font-bold text-emerald-600" id="success-est-value">1 - 3 Hari Kerja</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detail Produk -->
+            <div class="flex items-center gap-3 bg-slate-50 p-3 rounded-xl text-left border border-slate-100">
+                <div id="ticket-product-img" class="w-12 h-12 rounded-lg flex items-center justify-center text-xs font-bold text-white shadow-inner">
+                    MYK
+                </div>
+                <div>
+                    <h5 id="ticket-product-name" class="font-bold text-xs text-slate-800">Mykonos Sangre</h5>
+                    <p class="text-[10px] text-slate-400" id="success-instructions">Silakan pantau berkala perjalanan paket Anda.</p>
+                </div>
+            </div>
+
+            <div class="pt-2">
+                <button onclick="closeSuccessModal()" class="w-full bg-slate-900 hover:bg-rose-800 text-white font-bold py-3 px-6 rounded-xl transition">
+                    Selesai & Pesan Lagi
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Utama -->
+    <script>
+        // Data Seluruh Varian Lengkap Mykonos Sesuai Permintaan User (Harga normal rata-rata 200rb - 500rb)
+        const mykonosProducts = [
+            { id: 'm-01', brand: 'Mykonos', name: 'Mykonos Baby Love EDP', price: 219000, rating: 4.8, reviews: 1402, stock: 120, gradientClass: 'grad-baby-love', bottleInitial: 'BL', description: 'Aroma bedak bayi yang lembut, menenangkan, segar, dan bersahabat sepanjang hari.' },
+            { id: 'm-02', brand: 'Mykonos', name: 'Mykonos Blossom EDP', price: 229000, rating: 4.7, reviews: 853, stock: 95, gradientClass: 'grad-blossom', bottleInitial: 'BS', description: 'Keindahan kelopak bunga mawar putih dan melati yang bermekaran di pagi hari.' },
+            { id: 'm-03', brand: 'Mykonos', name: 'Mykonos California Club', price: 289000, rating: 4.9, reviews: 620, stock: 150, gradientClass: 'grad-california', bottleInitial: 'CC', description: 'Aroma kebebasan pesisir pantai barat dengan citrus laut yang super segar.' },
+            { id: 'm-04', brand: 'Mykonos', name: 'Mykonos California Blue', price: 299000, rating: 4.8, reviews: 490, stock: 110, gradientClass: 'grad-california-blue', bottleInitial: 'CB', description: 'Sensasi laut biru dalam dipadu aroma jeruk mandarine dan sentuhan mint segar.' },
+            { id: 'm-05', brand: 'Mykonos', name: 'Mykonos California Signature', price: 319000, rating: 4.9, reviews: 712, stock: 80, gradientClass: 'grad-california-sig', bottleInitial: 'CS', description: 'Sentuhan elegan bergamot, apel hijau matang, dan musk hangat berkelas.' },
+            { id: 'm-06', brand: 'Mykonos', name: 'Mykonos Ivory Extrait', price: 349000, rating: 4.8, reviews: 521, stock: 75, gradientClass: 'grad-ivory', bottleInitial: 'IV', description: 'Aroma premium bernuansa putih bersih, perpaduan bunga lili putih dan amber.' },
+            { id: 'm-07', brand: 'Mykonos', name: 'Mykonos Verve EDP', price: 249000, rating: 4.7, reviews: 345, stock: 140, gradientClass: 'grad-verve', bottleInitial: 'VV', description: 'Wangi fruity-floral manis segar yang memberikan energi dan semangat ceria.' },
+            { id: 'm-08', brand: 'Mykonos', name: 'Mykonos Jynx Extrait', price: 359000, rating: 4.9, reviews: 820, stock: 65, gradientClass: 'grad-jynx', bottleInitial: 'JX', description: 'Misterius, bold, dan adiktif dengan racikan rempah kuno, kopi pekat, dan vanilla hitam.' },
+            { id: 'm-09', brand: 'Mykonos', name: 'Mykonos Sansa Extrait', price: 369000, rating: 4.8, reviews: 932, stock: 50, gradientClass: 'grad-sansa', bottleInitial: 'SS', description: 'Wangi manis buah persik madu matang dikombinasikan kelembutan musk putih.' },
+            { id: 'm-10', brand: 'Mykonos', name: 'Mykonos Cristaux EDP', price: 269000, rating: 4.6, reviews: 411, stock: 115, gradientClass: 'grad-cristaux', bottleInitial: 'CX', description: 'Kejernihan kristal es dipadu sentuhan freesia segar dan aroma teh hijau.' },
+            { id: 'm-11', brand: 'Mykonos', name: 'Mykonos Zora Extrait', price: 339000, rating: 4.8, reviews: 680, stock: 90, gradientClass: 'grad-zora', bottleInitial: 'ZR', description: 'Kehangatan mentari pagi dengan aroma susu berpadu melati dan kelapa.' },
+            { id: 'm-12', brand: 'Mykonos', name: 'Mykonos Moroccan Vanilla', price: 329000, rating: 4.9, reviews: 1420, stock: 180, gradientClass: 'grad-moroccan', bottleInitial: 'MV', description: 'Vanilla murni Maroko yang eksotis dipadukan kayu manis hangat dan madu manis.' },
+            { id: 'm-13', brand: 'Mykonos', name: 'Mykonos Enchanted EDP', price: 259000, rating: 4.7, reviews: 541, stock: 130, gradientClass: 'grad-enchanted', bottleInitial: 'EC', description: 'Hutan fantasi hijau dengan paduan buah pir renyah, melon, dan daun mentol.' },
+            { id: 'm-14', brand: 'Mykonos', name: 'Mykonos Senja Extrait', price: 349000, rating: 4.9, reviews: 1980, stock: 105, gradientClass: 'grad-senja', bottleInitial: 'SJ', description: 'Keindahan sunset yang sendu, perpaduan kopi caramel hangat dan almond gurih.' },
+            { id: 'm-15', brand: 'Mykonos', name: 'Mykonos Eclipse EDP', price: 279000, rating: 4.8, reviews: 760, stock: 160, gradientClass: 'grad-eclipse', bottleInitial: 'EP', description: 'Wangi misterius, maskulin tapi elegan dari rempah jahe segar dan kulit premium.' },
+            { id: 'm-16', brand: 'Mykonos', name: 'Mykonos Adelina EDP', price: 239000, rating: 4.7, reviews: 312, stock: 92, gradientClass: 'grad-adelina', bottleInitial: 'AD', description: 'Manisnya bunga mekar dipadukan kue stroberi yang lembut menggugah selera.' },
+            { id: 'm-17', brand: 'Mykonos', name: 'Mykonos Stilettos Extrait', price: 379000, rating: 4.9, reviews: 588, stock: 45, gradientClass: 'grad-stilettos', bottleInitial: 'ST', description: 'Glamour dan memikat, aroma buah beri gelap bercampur beludru merah.' },
+            { id: 'm-18', brand: 'Mykonos', name: 'Mykonos Satin Blanc EDP', price: 289000, rating: 4.8, reviews: 1120, stock: 140, gradientClass: 'grad-satin-blanc', bottleInitial: 'SB', description: 'Aroma kain satin sutra putih bersih yang wangi teh bergamot dan melati lembut.' },
+            { id: 'm-19', brand: 'Mykonos', name: 'Mykonos Pink Beach EDP', price: 259000, rating: 4.8, reviews: 1845, stock: 220, gradientClass: 'grad-pink-beach', bottleInitial: 'PB', description: 'Vibe pantai pasir pink yang manis rasa kelapa, semangka, dan kelopak bunga tropis.' },
+            { id: 'm-20', brand: 'Mykonos', name: 'Mykonos Aphrodite EDP', price: 289000, rating: 4.7, reviews: 981, stock: 135, gradientClass: 'grad-aphrodite', bottleInitial: 'AP', description: 'Sensual, berkelas dengan paduan rempah kayu manis, madu, dan daun tembakau.' },
+            { id: 'm-21', brand: 'Mykonos', name: 'Mykonos Dark Secret Extrait', price: 389000, rating: 4.9, reviews: 633, stock: 58, gradientClass: 'grad-dark-secret', bottleInitial: 'DS', description: 'Kekuatan aroma pekat kayu oud hitam berbaur anggun dengan cokelat hitam pahit.' },
+            { id: 'm-22', brand: 'Mykonos', name: 'Mykonos Down to Earth EDP', price: 299000, rating: 4.6, reviews: 422, stock: 110, gradientClass: 'grad-down-to-earth', bottleInitial: 'DE', description: 'Nuansa alam setelah hujan, wangi rumput basah, tanah segar, dan pinus hijau.' },
+            { id: 'm-23', brand: 'Mykonos', name: 'Mykonos Bonfire Vanilla', price: 399000, rating: 5.0, reviews: 1540, stock: 68, gradientClass: 'grad-bonfire-vanilla', bottleInitial: 'BV', description: 'Kombinasi vanilla manis dengan aroma kayu terbakar hangat yang sangat memikat.' },
+            { id: 'm-24', brand: 'Mykonos', name: 'Mykonos Caramel Fudge Cookie', price: 249000, rating: 4.9, reviews: 2100, stock: 250, gradientClass: 'grad-caramel', bottleInitial: 'CF', description: 'Wangi kue kering cokelat karamel manis yang baru matang dari panggangan oven.' },
+            { id: 'm-25', brand: 'Mykonos', name: 'Mykonos Berry Caramel Pancake', price: 259000, rating: 4.8, reviews: 1730, stock: 190, gradientClass: 'grad-berry', bottleInitial: 'BP', description: 'Pancake lembut hangat disiram sirup blueberry manis asam dan lelehan karamel.' },
+            { id: 'm-26', brand: 'Mykonos', name: 'Mykonos Vanilla Clouds', price: 249000, rating: 4.9, reviews: 3450, stock: 320, gradientClass: 'grad-vanilla-clouds', bottleInitial: 'VC', description: 'Vanilla super lembut berpadu marshmallow manis empuk dan gurihnya kelapa.' },
+            { id: 'm-27', brand: 'Mykonos', name: 'Mykonos Matcha Latte EDP', price: 239000, rating: 4.8, reviews: 1190, stock: 180, gradientClass: 'grad-matcha', bottleInitial: 'ML', description: 'Teh matcha hijau premium dipadu dengan foam susu manis hangat yang menenangkan.' },
+            { id: 'm-28', brand: 'Mykonos', name: 'Mykonos Dolce Cherry Extrait', price: 349000, rating: 4.9, reviews: 890, stock: 77, gradientClass: 'grad-cherry', bottleInitial: 'DC', description: 'Sensasi kemewahan buah ceri merah dilapisi gula manis cair dan kayu manis eksotis.' },
+            { id: 'm-29', brand: 'Mykonos', name: 'Mykonos Coconut Dreams', price: 239000, rating: 4.7, reviews: 924, stock: 145, gradientClass: 'grad-coconut', bottleInitial: 'CD', description: 'Kelembutan air kelapa segar bercampur vanilla kelapa tropis sepanjang musim.' },
+            { id: 'm-30', brand: 'Mykonos', name: 'Mykonos Chai Crema Latte', price: 279000, rating: 4.8, reviews: 432, stock: 88, gradientClass: 'grad-chai', bottleInitial: 'CC', description: 'Kehangatan teh chai berempah khas India bersatu dengan foam susu manis.' },
+            { id: 'm-31', brand: 'Mykonos', name: 'Mykonos Luminos EDP', price: 269000, rating: 4.7, reviews: 390, stock: 110, gradientClass: 'grad-luminos', bottleInitial: 'LM', description: 'Aroma bercahaya, citrus cerah berpadu anggun dengan kelopak melati putih.' },
+            { id: 'm-32', brand: 'Mykonos', name: 'Mykonos Cafe Drops EDP', price: 249000, rating: 4.9, reviews: 1560, stock: 200, gradientClass: 'grad-cafe', bottleInitial: 'CD', description: 'Aroma kopi hitam espresso pekat yang disiram sirup gula aren manis.' },
+            { id: 'm-33', brand: 'Mykonos', name: 'Mykonos Milk Drops EDP', price: 249000, rating: 4.8, reviews: 1320, stock: 165, gradientClass: 'grad-milk', bottleInitial: 'MD', description: 'Sentuhan kelembutan susu murni putih yang manis, bersih, dan sangat nyaman.' },
+            { id: 'm-34', brand: 'Mykonos', name: 'Mykonos XOXO Rosy EDP', price: 239000, rating: 4.7, reviews: 780, stock: 130, gradientClass: 'grad-xoxo', bottleInitial: 'XR', description: 'Wangi romantis bunga mawar merah muda yang segar berbaur manisnya buah lici.' },
+            { id: 'm-35', brand: 'Mykonos', name: 'Mykonos Monaco Royale', price: 399000, rating: 4.9, reviews: 610, stock: 45, gradientClass: 'grad-monaco', bottleInitial: 'MR', description: 'Mewah berkelas bangsawan, perpaduan cognac, kayu ek, dan vanilla manis.' },
+            { id: 'm-36', brand: 'Mykonos', name: 'Mykonos On the Rocks EDP', price: 289000, rating: 4.8, reviews: 520, stock: 95, gradientClass: 'grad-on-the-rocks', bottleInitial: 'OR', description: 'Aroma menyegarkan seperti es batu dalam minuman citrus beralkohol dingin.' },
+            { id: 'm-37', brand: 'Mykonos', name: 'Mykonos Slow Living EDP', price: 259000, rating: 4.8, reviews: 810, stock: 140, gradientClass: 'grad-slow-living', bottleInitial: 'SL', description: 'Ketenangan aroma teh hijau hangat, lemon segar, dan daun mint di sore hari.' },
+            { id: 'm-38', brand: 'Mykonos', name: 'Mykonos Utopia Extrait', price: 389000, rating: 4.9, reviews: 490, stock: 60, gradientClass: 'grad-utopia', bottleInitial: 'UT', description: 'Aroma fantasi dunia sempurna, kombinasi ambar berharga dan melati malam.' },
+            { id: 'm-39', brand: 'Mykonos', name: 'Mykonos Penthouse Extrait', price: 410000, rating: 5.0, reviews: 310, stock: 35, gradientClass: 'grad-penthouse', bottleInitial: 'PH', description: 'Aroma elit modern dari atas gedung mewah, campuran leather halus dan saffron.' },
+            { id: 'm-40', brand: 'Mykonos', name: 'Mykonos Sorrento EDP', price: 279000, rating: 4.7, reviews: 290, stock: 125, gradientClass: 'grad-sorrento', bottleInitial: 'SR', description: 'Kesegaran kota pantai Italia, aroma buah lemon kuning segar dipadu dedaunan hijau.' },
+            { id: 'm-41', brand: 'Mykonos', name: 'Mykonos Reflection EDP', price: 269000, rating: 4.8, reviews: 602, stock: 100, gradientClass: 'grad-reflection', bottleInitial: 'RF', description: 'Aroma cermin air, wangi bunga lili air yang dingin dipadu musk selembut salju.' },
+            { id: 'm-42', brand: 'Mykonos', name: 'Mykonos Inception Extrait', price: 369000, rating: 4.9, reviews: 440, stock: 52, gradientClass: 'grad-inception', bottleInitial: 'IC', description: 'Mulai petualangan tak berujung dengan paduan segar ozon, laut, dan cedarwood.' },
+            { id: 'm-43', brand: 'Mykonos', name: 'Mykonos Royal Ispahan', price: 439000, rating: 4.9, reviews: 395, stock: 48, gradientClass: 'grad-royal', bottleInitial: 'RI', description: 'Keagungan mawar Ispahan legendaris berbalut manisnya buah lici dan oud tipis.' },
+            { id: 'm-44', brand: 'Mykonos', name: 'Mykonos Pistachio Cream Cake', price: 319000, rating: 5.0, reviews: 1890, stock: 210, gradientClass: 'grad-pistachio', bottleInitial: 'PC', description: 'Keharuman kue bolu lembut berlapis krim kacang pistachio yang manis gurih.' }
+        ];
+
+        // Format Rupiah
+        function formatRupiah(num) {
+            return new Intl.NumberFormat('id-ID', {
+                style: 'currency',
+                currency: 'IDR',
+                maximumFractionDigits: 0
+            }).format(num);
+        }
+
+        // Render Katalog Produk
+        function renderProducts(productsList = mykonosProducts) {
+            const grid = document.getElementById('product-grid');
+            const emptyState = document.getElementById('no-products');
+            const countLabel = document.getElementById('product-count');
+            
+            grid.innerHTML = '';
+            countLabel.innerText = productsList.length;
+
+            if (productsList.length === 0) {
+                emptyState.classList.remove('hidden');
+                return;
+            } else {
+                emptyState.classList.add('hidden');
+            }
+
+            productsList.forEach(p => {
+                const card = document.createElement('div');
+                card.className = "bg-white rounded-3xl border border-slate-100 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col";
+                card.innerHTML = `
+                    <div class="relative ${p.gradientClass} h-56 flex flex-col items-center justify-center select-none shadow-inner">
+                        <!-- Custom Visualisasi Botol Parfum -->
+                        <div class="w-16 h-28 bg-white/30 backdrop-blur-md rounded-2xl border-2 border-white/50 flex flex-col justify-between p-2 shadow-lg relative">
+                            <!-- Tutup Botol -->
+                            <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-4 bg-amber-500 rounded-t-lg border-b border-amber-600 shadow"></div>
+                            <!-- Label Botol -->
+                            <div class="bg-white/95 text-slate-800 rounded-lg py-3 text-center shadow-sm flex items-center justify-center flex-grow my-auto">
+                                <span class="font-black text-xl tracking-tight text-slate-850">${p.bottleInitial}</span>
+                            </div>
+                        </div>
+                        <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-slate-800 text-[10px] font-extrabold px-2.5 py-1 rounded-full shadow-sm">
+                            MYKONOS ORIGINAL
+                        </span>
+                        <span class="absolute top-4 right-4 bg-emerald-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-md">
+                            Ready Stock
+                        </span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex items-center gap-1.5 text-xs text-amber-500 mb-2">
+                            <div class="flex items-center">
+                                <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                                <span class="font-bold ml-1">${p.rating}</span>
+                            </div>
+                            <span class="text-slate-300">•</span>
+                            <span class="text-slate-400">(${p.reviews} ulasan)</span>
+                        </div>
+                        <h3 class="font-extrabold text-slate-800 text-base leading-snug hover:text-rose-600 transition cursor-pointer" onclick="openCheckout(${JSON.stringify(p).replace(/"/g, '&quot;')})">
+                            ${p.name}
+                        </h3>
+                        <p class="text-slate-500 text-xs mt-1.5 line-clamp-2 leading-relaxed flex-grow">
+                            ${p.description}
+                        </p>
+                        <div class="mt-5 pt-4 border-t border-slate-50 flex items-center justify-between">
+                            <div>
+                                <span class="text-[10px] uppercase font-semibold text-slate-400 block tracking-wider">Harga Resmi</span>
+                                <span class="text-base font-black text-slate-900">${formatRupiah(p.price)}</span>
+                            </div>
+                            <button onclick="openCheckout(${JSON.stringify(p).replace(/"/g, '&quot;')})" class="bg-slate-900 hover:bg-rose-600 hover:text-white text-white font-bold text-xs py-2.5 px-3.5 rounded-xl transition flex items-center gap-1.5 shadow-md">
+                                Beli Sekarang
+                                <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+            
+            lucide.createIcons();
+        }
+
+        // Fitur Pencarian Dinamis
+        function handleSearch() {
+            const query = document.getElementById('search-input').value.toLowerCase();
+            const filtered = mykonosProducts.filter(p => p.name.toLowerCase().includes(query) || p.description.toLowerCase().includes(query));
+            renderProducts(filtered);
+        }
+
+        // State Pembelian
+        let selectedProduct = null;
+        let selectedPayment = 'wallet'; 
+        let selectedDelivery = 'antar'; // 'antar' atau 'ambil'
+        let selectedSize = '50ml'; // '50ml' atau '100ml'
+        let finalPrice = 0;
+
+        // Membuka modal checkout
+        function openCheckout(product) {
+            selectedProduct = product;
+            selectedPayment = 'wallet';
+            selectedDelivery = 'antar';
+            selectedSize = '50ml';
+            finalPrice = product.price;
+
+            // Custom Bottle visual di modal
+            const mImg = document.getElementById('modal-product-img');
+            mImg.className = `w-20 h-20 rounded-xl flex flex-col items-center justify-center text-3xl shadow-md relative overflow-hidden text-white font-black ${product.gradientClass}`;
+            mImg.innerHTML = `
+                <div class="w-8 h-12 bg-white/30 backdrop-blur-sm rounded border border-white/50 flex items-center justify-center shadow">
+                    <span class="text-xs text-slate-950 font-bold">${product.bottleInitial}</span>
+                </div>
+            `;
+            
+            document.getElementById('modal-product-name').innerText = product.name;
+            document.getElementById('modal-product-price').innerText = formatRupiah(finalPrice);
+
+            // Sembunyikan PIN, pastikan PIN aman di balik sistem
+            document.getElementById('admin-pin-section').classList.add('hidden');
+            document.getElementById('admin-pin-input').value = '';
+            document.getElementById('pin-error-msg').classList.add('hidden');
+            document.getElementById('address-error-msg').classList.add('hidden');
+            document.getElementById('pickup-error-msg').classList.add('hidden');
+
+            // Reset Data Input Pembeli
+            document.getElementById('cust-name').value = '';
+            document.getElementById('cust-phone').value = '';
+            document.getElementById('cust-address').value = '';
+
+            document.getElementById('pickup-cust-name').value = '';
+            document.getElementById('pickup-cust-phone').value = '';
+
+            // Reset Pilihan Radio Ukuran ke 50ml
+            document.getElementsByName('perfume_size')[0].checked = true;
+            updateSizeSelection('50ml');
+
+            selectDeliveryType('antar');
+            selectPaymentMethod('wallet');
+
+            const modal = document.getElementById('modal-checkout');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            setTimeout(() => {
+                document.getElementById('checkout-card').classList.remove('scale-95');
+                document.getElementById('checkout-card').classList.add('scale-100');
+            }, 10);
+        }
+
+        // Memperbarui harga total berdasarkan ukuran yang dipilih
+        function updateSizeSelection(size) {
+            selectedSize = size;
+            const label50 = document.getElementById('label-size-50');
+            const label100 = document.getElementById('label-size-100');
+
+            if (size === '50ml') {
+                label50.className = "border-2 border-rose-600 bg-white rounded-xl p-3 flex items-center justify-between cursor-pointer";
+                label100.className = "border border-slate-200 bg-white rounded-xl p-3 flex items-center justify-between cursor-pointer";
+                finalPrice = selectedProduct.price;
+            } else {
+                label100.className = "border-2 border-rose-600 bg-white rounded-xl p-3 flex items-center justify-between cursor-pointer";
+                label50.className = "border border-slate-200 bg-white rounded-xl p-3 flex items-center justify-between cursor-pointer";
+                finalPrice = selectedProduct.price + 120000; // Penambahan 120rb untuk ukuran 100ml
+            }
+
+            // Update harga di modal
+            document.getElementById('modal-product-price').innerText = formatRupiah(finalPrice);
+        }
+
+        // Tutup modal checkout
+        function closeCheckoutModal() {
+            const modal = document.getElementById('modal-checkout');
+            document.getElementById('checkout-card').classList.remove('scale-100');
+            document.getElementById('checkout-card').classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }, 150);
+        }
+
+        // Memilih Tipe Pengantaran (Antar Alamat atau Ambil Sendiri)
+        function selectDeliveryType(type) {
+            selectedDelivery = type;
+            
+            const btnAntar = document.getElementById('btn-delivery-antar');
+            const btnAmbil = document.getElementById('btn-delivery-ambil');
+            const iconAmbil = document.getElementById('icon-delivery-ambil');
+
+            const sectionDelivery = document.getElementById('section-delivery-fields');
+            const sectionPickup = document.getElementById('section-pickup-fields');
+
+            if (type === 'antar') {
+                btnAntar.className = "border-2 border-rose-600 bg-rose-50/50 p-3 rounded-2xl flex items-center justify-center gap-2 transition font-bold text-sm text-slate-800";
+                btnAmbil.className = "border border-slate-200 p-3 rounded-2xl flex items-center justify-center gap-2 transition font-bold text-sm text-slate-600 hover:border-rose-600";
+                iconAmbil.className = "w-4 h-4 text-slate-400";
+
+                sectionDelivery.classList.remove('hidden');
+                sectionPickup.classList.add('hidden');
+            } else {
+                btnAmbil.className = "border-2 border-rose-600 bg-rose-50/50 p-3 rounded-2xl flex items-center justify-center gap-2 transition font-bold text-sm text-slate-800";
+                iconAmbil.className = "w-4 h-4 text-rose-600";
+                btnAntar.className = "border border-slate-200 p-3 rounded-2xl flex items-center justify-center gap-2 transition font-bold text-sm text-slate-600 hover:border-rose-600";
+
+                sectionDelivery.classList.add('hidden');
+                sectionPickup.classList.remove('hidden');
+            }
+        }
+
+        // Toggle visual style untuk radio button lokasi penjemputan
+        function toggleOutletStyle(outlet) {
+            const labelWatsons = document.getElementById('label-loc-watsons');
+            const labelBeauty = document.getElementById('label-loc-beauty');
+
+            if (outlet === 'watsons') {
+                labelWatsons.className = "border-2 border-rose-600 bg-white rounded-xl p-3 flex items-center gap-3 cursor-pointer";
+                labelBeauty.className = "border border-slate-200 bg-white rounded-xl p-3 flex items-center gap-3 cursor-pointer";
+            } else {
+                labelBeauty.className = "border-2 border-rose-600 bg-white rounded-xl p-3 flex items-center gap-3 cursor-pointer";
+                labelWatsons.className = "border border-slate-200 bg-white rounded-xl p-3 flex items-center gap-3 cursor-pointer";
+            }
+        }
+
+        // Pilihan Metode Pembayaran
+        function selectPaymentMethod(method) {
+            selectedPayment = method;
+            
+            const btnWallet = document.getElementById('btn-pay-wallet');
+            const btnAdmin = document.getElementById('btn-pay-admin');
+            const adminIcon = document.getElementById('icon-admin');
+            const adminPinSec = document.getElementById('admin-pin-section');
+            const walletInstructions = document.getElementById('wallet-payment-instructions');
+            const submitBtnText = document.getElementById('submit-btn-text');
+
+            if (method === 'wallet') {
+                btnWallet.className = "border-2 border-rose-600 bg-rose-50/50 p-4 rounded-2xl flex flex-col items-center justify-center gap-2 transition cursor-pointer";
+                btnAdmin.className = "border border-slate-200 p-4 rounded-2xl flex flex-col items-center justify-center gap-2 transition cursor-pointer hover:border-rose-600";
+                adminIcon.className = "w-6 h-6 text-slate-400";
+                
+                adminPinSec.classList.add('hidden');
+                walletInstructions.classList.remove('hidden');
+                submitBtnText.innerText = "Saya Sudah Bayar GoPay";
+            } else {
+                btnAdmin.className = "border-2 border-rose-600 bg-rose-50/50 p-4 rounded-2xl flex flex-col items-center justify-center gap-2 transition cursor-pointer";
+                adminIcon.className = "w-6 h-6 text-rose-600";
+                btnWallet.className = "border border-slate-200 p-4 rounded-2xl flex flex-col items-center justify-center gap-2 transition cursor-pointer hover:border-rose-600";
+
+                adminPinSec.classList.remove('hidden');
+                walletInstructions.classList.add('hidden');
+                submitBtnText.innerText = "Verifikasi Admin & Selesaikan";
+            }
+        }
+
+        // Memproses transaksi checkout
+        function processCheckout() {
+            let name = "";
+            let phone = "";
+            let addressOrStore = "";
+
+            if (selectedDelivery === 'antar') {
+                name = document.getElementById('cust-name').value.trim();
+                phone = document.getElementById('cust-phone').value.trim();
+                addressOrStore = document.getElementById('cust-address').value.trim();
+
+                if (!name || !phone || !addressOrStore) {
+                    document.getElementById('address-error-msg').classList.remove('hidden');
+                    return;
+                } else {
+                    document.getElementById('address-error-msg').classList.add('hidden');
+                }
+            } else {
+                name = document.getElementById('pickup-cust-name').value.trim();
+                phone = document.getElementById('pickup-cust-phone').value.trim();
+                addressOrStore = document.querySelector('input[name="pickup_outlet"]:checked').value;
+
+                if (!name || !phone) {
+                    document.getElementById('pickup-error-msg').classList.remove('hidden');
+                    return;
+                } else {
+                    document.getElementById('pickup-error-msg').classList.add('hidden');
+                }
+            }
+
+            // Otorisasi jika menggunakan admin (PIN 190614)
+            if (selectedPayment === 'admin') {
+                const pinInput = document.getElementById('admin-pin-input').value;
+                if (pinInput !== '190614') {
+                    document.getElementById('pin-error-msg').classList.remove('hidden');
+                    return;
+                } else {
+                    document.getElementById('pin-error-msg').classList.add('hidden');
+                }
+            }
+
+            // Atur Visual Sukses Berdasarkan Pilihan Pengiriman
+            const successIcon = document.getElementById('success-icon');
+            const successTitle = document.getElementById('success-title');
+            const successDesc = document.getElementById('success-desc');
+            const ticketLabelType = document.getElementById('ticket-label-type');
+            const successCustLabel = document.getElementById('success-cust-label');
+            const successAddressLabel = document.getElementById('success-address-label');
+            const successEstLabel = document.getElementById('success-est-label');
+            const successEstValue = document.getElementById('success-est-value');
+            const successInstructions = document.getElementById('success-instructions');
+
+            // Generate nomor kode transaksi/resi otomatis
+            const randomCode = (selectedDelivery === 'antar' ? 'MYKNS-' : 'PICKUP-') + Math.floor(100000 + Math.random() * 900000);
+
+            if (selectedDelivery === 'antar') {
+                successIcon.innerText = "🚚";
+                successTitle.innerText = "Pesanan Diproses!";
+                
+                if (selectedPayment === 'admin') {
+                    successDesc.innerText = "Verifikasi PIN Admin Sukses. Pembayaran dilewati (Gratis). Kurir segera mengirimkan paket Anda.";
+                } else {
+                    successDesc.innerText = "Terima kasih atas konfirmasinya. Admin akan memverifikasi transfer GoPay Anda. Kurir segera memproses pengiriman.";
+                }
+                
+                ticketLabelType.innerText = "Resi Pengiriman Anda (Otomatis)";
+                successCustLabel.innerText = "Penerima:";
+                successAddressLabel.innerText = "Alamat Kirim:";
+                successEstLabel.innerText = "Estimasi Pengantaran:";
+                successEstValue.innerText = "1 - 3 Hari Kerja";
+                successEstValue.className = "font-bold text-emerald-600";
+                successInstructions.innerText = "Mohon simpan nomor resi di atas untuk pelacakan.";
+            } else {
+                successIcon.innerText = "🛍️";
+                successTitle.innerText = "Siap Diambil!";
+                
+                if (selectedPayment === 'admin') {
+                    successDesc.innerText = "Verifikasi PIN Admin Sukses. Kode penukaran instan gratis Anda telah aktif.";
+                } else {
+                    successDesc.innerText = "Konfirmasi terkirim. Kode penukaran di bawah sudah aktif untuk diklaim setelah verifikasi transfer GoPay selesai.";
+                }
+                
+                ticketLabelType.innerText = "Kode Tiket Pengambilan (Tunjukkan ke Kasir)";
+                successCustLabel.innerText = "Nama Pengambil:";
+                successAddressLabel.innerText = "Lokasi Pengambilan:";
+                successEstLabel.innerText = "Status Pengambilan:";
+                successEstValue.innerText = "Siap Diambil Sekarang";
+                successEstValue.className = "font-bold text-amber-600";
+                successInstructions.innerText = "Tunjukkan kode di atas ke staf Watsons / Beauty Hall pilihan Anda.";
+            }
+
+            // Set Data Halaman Sukses
+            document.getElementById('ticket-code').innerText = randomCode;
+            document.getElementById('ticket-recipient').innerText = `${name} (${phone})`;
+            document.getElementById('ticket-address').innerText = addressOrStore;
+            document.getElementById('ticket-method').innerText = selectedPayment === 'admin' ? 'Gratis (Metode Admin)' : 'GoPay Transfer (+62-851-8516-0051)';
+            
+            const tImg = document.getElementById('ticket-product-img');
+            tImg.className = `w-12 h-12 rounded-lg flex items-center justify-center text-xs shadow-sm font-bold text-slate-800 ${selectedProduct.gradientClass}`;
+            tImg.innerHTML = selectedProduct.bottleInitial;
+            document.getElementById('ticket-product-name').innerText = `${selectedProduct.name} - ${selectedSize} (${formatRupiah(finalPrice)})`;
+
+            // Tutup Modal Belanja & Tampilkan Resi Sukses
+            closeCheckoutModal();
+            setTimeout(() => {
+                const successModal = document.getElementById('modal-success');
+                successModal.classList.remove('hidden');
+                successModal.classList.add('flex');
+            }, 200);
+        }
+
+        // Tutup sukses modal
+        function closeSuccessModal() {
+            const successModal = document.getElementById('modal-success');
+            successModal.classList.add('hidden');
+            successModal.classList.remove('flex');
+        }
+
+        // Render inisiasi awal
+        window.addEventListener('DOMContentLoaded', () => {
+            renderProducts(mykonosProducts);
+        });
+    </script>
+</body>
+</html>
+
+```
